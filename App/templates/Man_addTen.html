@@ -1,0 +1,16 @@
+{% extends 'Man_Base.html' %}
+
+{% block title %}
+Add Tenant
+{% endblock %}
+
+{% block content %}
+<h1>Add Item Page</h1>
+<div class="container">
+    <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+</div>
+{% endblock %}

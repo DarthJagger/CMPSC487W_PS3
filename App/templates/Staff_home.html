@@ -1,0 +1,18 @@
+{% extends 'Staff_base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<h1>Home Page</h1>
+
+
+    {% for items in storeItem %}
+    <li>
+        <a href="/request/{{ items.ID }}/">-Request ID: {{ items.ID }} - Description:{{ items.desc }}</a>
+
+    </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

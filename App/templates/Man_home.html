@@ -1,0 +1,19 @@
+{% extends 'Man_Base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<h1>Home Page</h1>
+
+    {% for tenn in tenants %}
+    <li>
+
+        <a>-Tennant ID: {{ tenn.ID }} - Tennant Name: {{ tenn.name }}</a>
+        <a href="Man_UpdateTen/{{ tenn.ID }}/">[move]</a>
+        <a href="Man_DeleteTen/{{ tenn.ID }}/">[delete]</a>
+    </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

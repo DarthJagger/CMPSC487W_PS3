@@ -1,0 +1,19 @@
+{% extends 'Ten_base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<h1>Home Page</h1>
+
+
+    {% for tenn in tenants %}
+    <li>
+
+        <a>-Request ID: {{ tenn.ID }} - Description: {{ tenn.desc }}</a>
+
+    </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

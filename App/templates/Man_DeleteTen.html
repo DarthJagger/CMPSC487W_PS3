@@ -1,0 +1,25 @@
+{% extends 'Man_Base.html' %}
+
+{% block title %}
+    Update Item
+{% endblock %}
+
+{% block content %}
+    <h1>Delete Page</h1>
+        <p>Are you sure you want to delete this item?: {{ item.name }}</p>
+
+        <br>
+        <br>
+        -Id#: {{ item.ID }}
+        <br> -Tenant Name: {{ item.name }}
+        <br> -Phone Number: {{item.number }}
+        <br> -Email: {{ item.email }}
+        <br> -Date In: {{ item.date_in }}
+        <br> -Date Out: {{ item.date_out }}
+        <br> -Apartment Number: {{ item.apartment }}
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Delete">
+        </form>
+{% endblock %}

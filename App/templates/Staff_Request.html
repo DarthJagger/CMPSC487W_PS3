@@ -1,0 +1,26 @@
+{% extends 'Staff_base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<h1>Home Page</h1>
+
+
+        -Id#: {{ item.ID }}
+        <br> -Apartment: {{ item.apartment }}
+        <br> -Area: {{ item.area }}
+        <br> -Date: {{ item.date }}
+        <br> -Status: {{ item.status }}
+        <br>  -Item Description: {{ item.desc }}
+        <br> <img src="{{ item.image.url }}"  width="200px" alt="img">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Mark Complete">
+        </form>
+
+
+
+{% endblock %}
